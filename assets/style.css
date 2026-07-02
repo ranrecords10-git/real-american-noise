@@ -55,6 +55,10 @@ header.site .sep {
     font-size: .85rem;
 }
 
+header.site nav {
+    display: flex;
+    gap: .5rem;
+}
 header.site nav a {
     border: 1px solid var(--gray);
     color: var(--link);
