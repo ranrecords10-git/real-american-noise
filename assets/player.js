@@ -10,8 +10,15 @@ document.querySelectorAll('.tracklist').forEach(function (list) {
         currentIndex = index;
         tracks.forEach(function (t) { t.classList.remove('active'); });
         track.classList.add('active');
-        audio.src = track.dataset.src;
-        audio.play();
+
+        audio.innerHTML = '';
+        var source = document.createElement('source');
+        source.src = track.dataset.src;
+        source.type = 'audio/mpeg';
+        audio.appendChild(source);
+        audio.load();
+        audio.play().catch(function () {});
+
         if (nowPlaying) nowPlaying.textContent = track.dataset.title;
     }
 
