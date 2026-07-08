@@ -75,6 +75,13 @@ header.site nav a:hover {
     align-items: flex-start;
     display: flex;
     gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.release-layout.release-divider {
+    border-top: 1px solid var(--gray);
+    margin-bottom: 0;
+    padding-top: 2rem;
 }
 
 .cover {
